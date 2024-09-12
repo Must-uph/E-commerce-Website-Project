@@ -1,0 +1,262 @@
+main {
+  margin-top: 60px;
+}
+
+.products-grid,
+.product-list {
+  display: grid;
+  margin: 0;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.all-products-sections {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-section {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+@media (max-width: 2000px) {
+  .products-grid,
+  .product-list {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media (max-width: 1600px) {
+  .products-grid,
+  .product-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 1300px) {
+  .products-grid,
+  .product-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1000px) {
+  .products-grid,
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .products-grid,
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .products-grid,
+  .product-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.product-container {
+  padding: 40px 25px 25px 25px;
+  /* opacity: 0;
+  transform: translateY(150px);
+  transition: all 2s ease; */
+
+  border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231);
+  border-top: 1px solid rgb(231, 231, 231);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ____________________Reveal Element on Scroll______________________ */
+.product-container--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ___________________________________________________________________ */
+
+.product-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  /* transition: all 3s; */
+}
+
+.product-name {
+  height: 40px;
+  margin-bottom: 5px;
+  transition: all ease-in 0.3s;
+  cursor: pointer;
+}
+
+.product-name:hover{
+  color: rgb(14, 169, 94);
+}
+
+.product-rating-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.product-rating-stars {
+  width: 100px;
+  margin-right: 6px;
+}
+
+.product-rating-count {
+  color: rgb(1, 124, 182);
+  cursor: pointer;
+  margin-top: 3px;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 5px;
+  gap: 10px;
+}
+
+.new-price {
+  color: rgb(49, 206, 10);
+}
+
+.product-quantity-container {
+  margin-bottom: 10px;
+}
+
+.product-quantity-container select {
+  margin-bottom: 10px;
+}
+
+
+.product-spacer {
+  flex: 1;
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 5px;
+  align-items: center;
+}
+
+.added-to-cart {
+  color: rgb(6, 125, 98);
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  margin: 8px 0px;
+  opacity: 0;
+}
+
+.added-to-cart img {
+  height: 20px;
+  margin-right: 5px;
+}
+
+
+
+/* .products-category{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  background-color: rgb(19, 25, 33);
+  position:sticky;
+} */
+
+a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+ul{
+  list-style: none;
+  text-decoration: none;
+}
+
+.icon-container{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.sort-options select{
+  margin-right: 5px;
+}
+
+.category{
+  height: 20px;
+  transition: all ease .2s;
+  flex: 0 0 auto; 
+  padding: 6px;
+  color: black;
+  border-radius: 12px; 
+}
+
+.active-category{
+  transition: all 0.3s;
+  color: rgb(0, 151, 96);
+}
+
+.category:hover{
+  background-color: gray;
+}
+
+.active-category:hover{
+  background-color: white;
+  /* transform: scale(1.1);  */
+}
+
+
+.categories{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  padding: 5px;
+}
+
+.scroll-container {
+  width: 100%;           
+  overflow-x: auto;      
+  white-space: nowrap;   
+}
+
+.colors{
+  border-radius: 100%;
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.colors-active{
+  border: 2px solid rgba(0, 0, 0, 0.199);
+  scale: 1.3;
+  box-shadow: 0px 0px 5px black;
+}

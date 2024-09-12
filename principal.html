@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/shop-up-mobile-logo.png" class="favicon">
+    <title>Shop Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/shared/header.css">
+    <link rel="stylesheet" href="./styles/principal.css">
+    <link rel="stylesheet" href="./styles/nav-slidebar.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/shared/general.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="header-left-section">
+                <a href="principal.html" class="header-link">
+                    <img class="logo" src="./images/shop-up-logo.png">
+                    <img class="mobile-logo" src="./images/shop-up-mobile-logo.png">
+                </a>
+            </div>
+
+            <div class="nav-container">
+                <ul class="nav">
+                    <a href="#home" class="nav-choice">
+                        <li>Home</li>
+                    </a>
+                    <a href="./principal.html#products" class="nav-choice">
+                        <li>Categories</li>
+                    </a>
+                    <a href="./orders.html" class="nav-choice">
+                        <li>Orders</li>
+                    </a>
+                    <a href="./principal.html#about" class="nav-choice">
+                        <li>About</li>
+                    </a>
+                    <a href="./principal.html#contact" class="nav-choice">
+                        <li>Contact</li>
+                    </a>
+                </ul>
+            </div>
+
+            <div class="header-right-section">
+                <a href="./registration.html?redirect=principal.html" class="registration-link">
+                    <img src="./images/icons/account.png">
+                </a>
+
+                <a class="cart-link header-link" href="./checkout.html">
+                    <img class="cart-icon" src="../images/icons/cart-icon.png">
+                    <div class="cart-quantity">0</div>
+                    <div class="cart-text">Cart</div>
+                </a>
+
+                <button id="open-slide-bar" class="open-button">
+                    <img src="./images/icons/menu-burger.png">
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="slide-bar">
+            <div class="slide-bar-header">
+                <h2>Discover other sections</h2>
+                <button id="close-slide-bar">&times;</button>
+            </div>
+            <div class="slide-bar-content">
+                <div class="slide-bar-nav">
+                    <ul class="slide-nav">
+                        <a href="./principal.html#home" class="nav-choice">
+                            <li>Home</li>
+                        </a>
+                        <a href="./principal.html#products" class="nav-choice">
+                            <li>Categories</li>
+                        </a>
+                        <a href="./orders.html" class="nav-choice">
+                            <li>Orders</li>
+                        </a>
+                        <a href="./principal.html#about" class="nav-choice">
+                            <li>About</li>
+                        </a>
+                        <a href="./principal.html#contact" class="nav-choice">
+                            <li>Contact</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="main" id="home">
+            <div>
+                <h1>ONLINE <br><SPAn>CHOPING</SPAn> </h1>
+                <h3>Discover the latest products, of high quality
+                    <br> and at very reasonable prices
+                </h3>
+                <a href="#products" class="btn-main">Discover</a>
+            </div>
+        </section>
+
+        <section class="produits" id="products">
+            <h2 class="title">Products Categories</h2>
+            <div class="content">
+
+                <div class="produits-card">
+                    <div class="produits-image">
+                        <img src="./images/Clothing.jpg" />
+                    </div>
+                    <div class="produits-info">
+                        <p class="produits-category">garment </p>
+                        <strong class="produits-title">
+                            <span>Clothing</span>
+                            <a href="#" class="more-details category" data-type="Clothing">More details</a>
+                        </strong>
+                    </div>
+                </div>
+                <div class="produits-card">
+                    <div class="produits-image">
+                        <img src="./images/Kitchen.jpg" />
+                    </div>
+                    <div class="produits-info">
+                        <p class="produits-category">kitchenware</p>
+                        <strong class="produits-title">
+                            <span>Kitchen </span>
+                            <a href="#" class="more-details category" data-type="Kitchen">More details</a>
+                        </strong>
+                    </div>
+                </div>
+                <div class="produits-card">
+                    <div class="produits-image">
+                        <img src="./images/sport.jpg" />
+                    </div>
+                    <div class="produits-info">
+                        <p class="produits-category">Sportswear & Sports equipment </p>
+                        <strong class="produits-title">
+                            <span>Sports</span>
+                            <a href="#" class="more-details category" data-type="Sports">More details</a>
+                        </strong>
+                    </div>
+                </div>
+                <div class="produits-card">
+                    <div class="produits-image">
+                        <img src="./images/accessoir.jpg" />
+                    </div>
+                    <div class="produits-info">
+                        <p class="produits-category"> Accessories </p>
+                        <strong class="produits-title">
+                            <span>Accessories</span>
+                            <a href="#" class="more-details category" data-type="Accessories">More details</a>
+                        </strong>
+                    </div>
+                </div>
+                <div class="produits-card">
+                    <div class="produits-image">
+                        <img src="./images/Footwear.jpg" />
+                    </div>
+                    <div class="produits-info">
+                        <p class="produits-category">Shoes & slippers</p>
+                        <strong class="produits-title">
+                            <span>Footwear</span>
+                            <a href="#" class="more-details category" data-type="Footwear">More details</a>
+                        </strong>
+                    </div>
+                </div>
+                <div class="produits-card">
+                    <div class="produits-image">
+                        <img src="./images/Electrics.jpg" />
+                    </div>
+                    <div class="produits-info">
+                        <p class="produits-category">Electronic devices </p>
+                        <strong class="produits-title">
+                            <span>Electronics</span>
+                            <a href="#" class="more-details category" data-type="electronics">More details</a>
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div>
+                <img src="./images/shop-up-mobile-logo-with-shadow.png" alt="" class="IMAGE">
+            </div>
+
+            <div>
+                <h1>About Shop Up</h1>
+                <p>
+                    Welcome to Shop Up, your number one source for all things . We're dedicated to giving you the very
+                    best of
+                    consumer electronics, with a focus on quality, customer service, and uniqueness.
+                </p>
+                <p>
+                    Founded in 2024, Electronic Market has come a long way from its beginnings in a small garage. When
+                    Jane first
+                    started out, her passion for providing the best electronic gadgets drove her to quit her day job,
+                    and gave her
+                    the impetus to turn hard work and inspiration into a booming online store. We now serve customers
+                    all over the
+                    world, and are thrilled to be a part of the quirky wing of the electronics industry.
+                </p>
+                <p>
+                    We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions
+                    or
+                    comments, please don't hesitate to contact us.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="box-wrapper">
+                <div class="info-wrap">
+                    <h2 class="info-title">Contact Information</h2>
+                    <h3 class="info-sub-title">Fill up the form and our Team will get back to you within 24 hours</h3>
+                    <ul class="info-details">
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>Phone:</span> <a href="">(+212)000000000</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Email:</span> <a href="">support@shopup.com</a>
+                        </li>
+                        <li>
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn:</span> <a href="">SHOP UP</a>
+                        </li>
+                    </ul>
+                    <ul class="social-icons">
+                        <li><a href=""><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <div class="form-wrap">
+                    <form action="#" method="POST">
+                        <h2 class="form-title">Send us a message</h2>
+                        <div class="form-fields">
+                            <div class="form-group">
+                                <input type="text" class="fname" placeholder="First Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="lname" placeholder="Last Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="email" placeholder="Mail">
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="phone" placeholder="Phone">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="" placeholder="Write your message"></textarea>
+                            </div>
+                        </div>
+                        <input type="submit" value="Send Message" class="submit-button">
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Shop Up. All rights reserved.</p>
+    </footer>
+    <script src="./scripts/principal.js"></script>
+    <script src="./scripts/nav-slidebar.js"></script>
+</body>
+
+</html>

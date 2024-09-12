@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/shop-up-mobile-logo.png" class="favicon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <title>Products</title>
+  <link rel="stylesheet" href="./styles/products.css">
+  <link rel="stylesheet" href="./styles/sildebar.css">
+  <link rel="stylesheet" href="./styles/shared/header.css">
+  <link rel="stylesheet" href="./styles/shared/general.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <div class="header-left-section">
+        <a href="principal.html" class="header-link">
+          <img class="logo" src="images/shop-up-logo.png">
+          <img class="mobile-logo" src="images/shop-up-mobile-logo.png">
+        </a>
+      </div>
+
+      <div class="header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon.png">
+        </button>
+        <!-- <div class="suggestion-box"></div> -->
+      </div>
+
+      <div class="header-right-section">
+        <a class="registration-link header-link" href="./registration.html?redirect=products.html">
+          <img src="./images/icons/account.png">
+        </a>
+
+        <a class="cart-link header-link" href="./checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon.png">
+          <div class="cart-quantity">0</div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="products-slide-bar">
+      <div class="products-slide-bar-header">
+        <h2>Filtres and Sort</h2>
+        <button id="close-slide-bar">&times;</button>
+      </div>
+
+      <div class="products-slide-bar-content">
+        <section class="filter-section">
+          <h3>Filtres</h3>
+          <ul class="categories">
+            <a href="#">
+              <li class="category" data-type="all">All</li>
+            </a>
+            <a href="#">
+              <li class="category" data-type="clothing">Clothing</li>
+            </a>
+            <a href="#">
+              <li class="category" data-type="kitchen">Kitchen</li>
+            </a>
+            <a href="#">
+              <li class="category" data-type="sports">Sports</li>
+            </a>
+            <a href="#">
+              <li class="category" data-type="accessories">Accessories</li>
+            </a>
+            <a href="#">
+              <li class="category" data-type="footwear">Footwear</li>
+            </a>
+            <a href="#">
+              <li class="category" data-type="electronics">Electronics</li>
+            </a>
+          </ul>
+        </section>
+
+        <section class="sort-section">
+          <h3>Sort</h3>
+          <div class="sort-options">
+            <select name="Sort By" id="sort-options">
+              <option data-option="rating" data-order="descending" disabled selected>Sort By:</option>
+              <option data-option="rating" data-order="descending">Rating Descending</option>
+              <option data-option="rating" data-order="ascending">Rating Ascending</option>
+              <option data-option="price" data-order="descending">Price Descending</option>
+              <option data-option="price" data-order="ascending">Price Ascending</option>
+            </select>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <button id="open-slide-bar" class="open-button">
+      <img src="./images/icons/settings-sliders (1).png">
+    </button>
+    <div class="products-grid"></div>
+    <div class="all-products-sections"></div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Shop Up. All rights reserved.</p>
+  </footer>
+  <script type="module" src="./scripts/products.js"></script>
+  <script src="./scripts/slidebar.js"></script>
+</body>
+
+</html>

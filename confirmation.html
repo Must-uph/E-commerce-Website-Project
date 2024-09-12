@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/shop-up-mobile-logo.png" class="favicon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Order Confirmation</title>
+
+    <link rel="stylesheet" href="./styles/confirmation.css">
+    <link rel="stylesheet" href="./styles/shared/general.css">
+    <link rel="stylesheet" href="./styles/shared/toast.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="progress-container">
+            <!-- <div class="progress-step">
+                <div class="progress-circle active" id="circle-step-1">1</div>
+                <div class="progress-title active">Shipping Information</div>
+            </div>
+            <div class="progress-step">
+                <div class="progress-circle" id="circle-step-2">2</div>
+                <div class="progress-title">Payment Information</div>
+            </div> -->
+            <progress value="0" max="100"></progress>
+        </div>
+
+        <h2 id="shipping-title">Shipping Information</h2>
+        <form id="shipping-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="fullName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Enter your address" required>
+            </div>
+            <div class="form-group">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="Enter your city" required>
+            </div>
+            <div class="form-group">
+                <label for="postal-code">Postal Code</label>
+                <input type="text" id="postal-code" name="postalCode" placeholder="Enter your postal code" required>
+            </div>
+            <button type="button" class="btn button-primary" id="next-to-payment">Next</button>
+        </form>
+
+        <div id="payment-section" class="hidden">
+            <h2 id="payment-title">Payment Information</h2>
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="payment-method">Select Payment Method</label>
+                    <select id="payment-method" name="paymentMethod" required>
+                        <option value="" disabled selected>Select a method</option>
+                        <option value="credit-card">Credit/Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="cod">Cash on Delivery</option>
+                    </select>
+                </div>
+
+                <div id="credit-card" class="payment-method">
+                    <div class="form-group">
+                        <label for="card-number">Card Number</label>
+                        <input type="text" id="card-number" name="cardNumber" placeholder="Enter card number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry-date">Expiry Date</label>
+                        <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="Enter CVV" required>
+                    </div>
+                </div>
+
+                <div id="paypal" class="payment-method">
+                    <div class="form-group">
+                        <label for="paypal-email">PayPal Email</label>
+                        <input type="email" id="paypal-email" name="paypalEmail" placeholder="Enter PayPal email"
+                            required>
+                    </div>
+                </div>
+
+                <div id="cod" class="payment-method">
+                    <p>Cash on Delivery (COD) is selected. Please prepare the exact amount as no change will be
+                        provided.</p>
+                </div>
+
+                <button type="submit" class="btn button-primary">Confirm and Pay</button>
+            </form>
+        </div>
+        <span class="container-errors"></span>
+    </div>
+    <div id="toast" class="toast"></div>
+    <script type="module" src="./scripts/confirmation.js"></script>
+
+</body>
+
+</html>

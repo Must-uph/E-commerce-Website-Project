@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Orders</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="./images/shop-up-mobile-logo.png" class="favicon">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="./styles/nav-slidebar.css">
+  <link rel="stylesheet" href="styles/shared/header.css">
+  <link rel="stylesheet" href="styles/orders.css">
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-left-section">
+      <a href="principal.html" class="header-link">
+        <img class="logo" src="images/shop-up-logo.png">
+        <img class="mobile-logo" src="images/shop-up-mobile-logo.png">
+      </a>
+    </div>
+
+    <div class="nav-container">
+      <ul class="nav">
+        <a href="./principal.html#home" class="nav-choice">
+          <li>Home</li>
+        </a>
+        <a href="./principal.html#about" class="nav-choice">
+          <li>About</li>
+        </a>
+        <a href="./principal.html#contact" class="nav-choice">
+          <li>Contact</li>
+        </a>
+      </ul>
+    </div>
+
+    <div class="header-right-section">
+      <a class="registration-link header-link" href="./registration.html?redirect=orders.html">
+        <img src="./images/icons/account.png">
+      </a>
+
+      <a class="cart-link header-link" href="checkout.html">
+        <img class="cart-icon" src="images/icons/cart-icon.png">
+        <div class="cart-quantity">0</div>
+        <div class="cart-text">Cart</div>
+      </a>
+      <button id="open-slide-bar" class="open-button">
+        <img src="./images/icons/menu-burger.png">
+      </button>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="slide-bar">
+      <div class="slide-bar-header">
+        <h2>Discover other sections</h2>
+        <button id="close-slide-bar">&times;</button>
+      </div>
+      <div class="slide-bar-content">
+        <div class="slide-bar-nav">
+          <ul class="slide-nav">
+            <a href="./principal.html#home" class="nav-choice">
+              <li>Home</li>
+            </a>
+            <a href="./principal.html#products" class="nav-choice">
+              <li>Categories</li>
+            </a>
+          <a href="./principal.html#about" class="nav-choice">
+              <li>About</li>
+          </a>
+            <a href="./principal.html#contact" class="nav-choice">
+              <li>Contact</li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-title">Your Orders</div>
+    <div class="orders-grid"></div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Shop Up. All rights reserved.</p>
+  </footer>
+  <script type="module" src="./scripts/orders.js"></script>
+  <script src="./scripts/nav-slidebar.js"></script>
+</body>
+
+</html>
