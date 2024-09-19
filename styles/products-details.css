@@ -144,6 +144,10 @@ main{
 
 }
 
+.add-to-cart-button {
+  width: 100%;
+}
+
 .description-reviews{
   display: flex;
   gap: 10px;
