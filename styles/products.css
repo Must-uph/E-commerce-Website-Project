@@ -174,18 +174,10 @@ main {
   margin-right: 5px;
 }
 
-
-
-/* .products-category{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.button-primary {
+  cursor: pointer;
   width: 100%;
-  color: #fff;
-  background-color: rgb(19, 25, 33);
-  position:sticky;
-} */
+}
 
 a{
   text-decoration: none;

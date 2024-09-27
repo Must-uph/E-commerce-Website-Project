@@ -174,32 +174,6 @@ main{
   box-shadow: 0px 0px 5px black;
 }
 
-.back-container {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  gap: 5px;
-  margin: 10px;
-  padding: 5px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.back-icon{
-  width: 30px;
-}
-
-.back-container span{
-  color: #000;
-}
-
-.back-container:hover{
-  color: aliceblue;
-}
-
 
 .products-grid {
   display: grid;

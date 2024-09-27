@@ -1,7 +1,6 @@
 import { products } from "./data.js";
 import { findProdCart, cart, updateCartQuantity, starsIcon, shipping } from "./utils.js";
 let productsCategory = [];
-// localStorage.clear();
 
 function productsOfCat(cat) {
   let categoryProducts = [];

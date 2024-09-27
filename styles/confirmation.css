@@ -19,7 +19,6 @@ body {
   max-width: 600px;
   flex: 1;
   border-radius: 10px;
-  animation: alternate-reverse;
 }
 .container-errors{
   color: darkred;
@@ -44,7 +43,9 @@ h2 {
   box-sizing: border-box;
   outline: none;
 }
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="email"]:focus {
   outline: none;
   border-bottom: 1px solid;
   border-top: none;
@@ -59,7 +60,6 @@ input[type="text"], input[type="password"], input[type="email"] {
   border-right: none;
 }
 .btn {
-  display: inline-block;
   background-color: #4CAF50;
   color: #fff;
   padding: 10px 20px;
@@ -69,15 +69,13 @@ input[type="text"], input[type="password"], input[type="email"] {
   width: 100%;
   border: none;
   margin-top: 10px;
+  margin-left: 25%;
 }
 .btn:hover {
   background-color: #45a049;
 }
 .progress-container {
-  /* display: flex; */
-  /* justify-content: space-between; */
   margin-bottom: 20px;
-  
 }
 .progress-container progress {
   width: 100%;

@@ -1,10 +1,8 @@
 import { products } from "./data.js";
-import { findProdCart, cart, updateCartQuantity, starsIcon ,shipping} from "./utils.js";
+import { findProdCart, cart, updateCartQuantity, starsIcon, shipping } from "./utils.js";
 
 let productReviews = JSON.parse(localStorage.getItem('productReviews')) || [];
 updateCartQuantity();
-
-// localStorage.clear();
 
 function product(id) {
   products.forEach(p => {
@@ -12,31 +10,31 @@ function product(id) {
       document.querySelector('title').innerHTML = `${p.name}`;
       document.querySelector('main').innerHTML += `
       <div class="product-info-container">
-
+      
       <div class="product-img-container">
-        <img src="${p.image}" class="product-image">
+      <img src="${p.image}" class="product-image">
       </div>
       <div class="product-details-container">
-        <div class="product-name">${p.name}</div>
-        <div class="product-rating">
+      <div class="product-name">${p.name}</div>
+      <div class="product-rating">
           <div class="product-rating-stars"></div>
           <div class="product-rating-count"></div>
-        </div>
-
-        <div>
+          </div>
+          
+          <div>
           <span class="old-price" style="${p.newPrice ? `text-decoration: line-through;
-          color: rgb(255, 0, 0);` : ''}">$${(p.priceCents / 100).toFixed(2)}</span>
-          <span class="new-price">${p.newPrice ? `$${(p.newPrice / 100).toFixed(2)}` : ``}</span>
-        </div>
-  
-        <div class="product-category" style="font-weight: bold;">
-          Category: ${p.category.charAt(0).toUpperCase() + p.category.slice(1)}
-        </div>
-  
-        <div class="product-colors"></div>
-        
-        <div class="product-quantity">
-          <select id="${p.id}">
+            color: rgb(255, 0, 0);` : ''}">$${(p.priceCents / 100).toFixed(2)}</span>
+            <span class="new-price">${p.newPrice ? `$${(p.newPrice / 100).toFixed(2)}` : ``}</span>
+            </div>
+            
+            <div class="product-category" style="font-weight: bold;">
+            Category: ${p.category.charAt(0).toUpperCase() + p.category.slice(1)}
+            </div>
+            
+            <div class="product-colors"></div>
+            
+            <div class="product-quantity">
+            <select id="${p.id}">
             <option value="1" selected>1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -59,7 +57,7 @@ function product(id) {
       
     </div>
     <div class="description-reviews">
-      <div class="section description active-section">Description</div>
+    <div class="section description active-section">Description</div>
       <div class="section reviews">Reviews</div>
     </div>
     <div class="product-description">
@@ -209,9 +207,9 @@ function reviewsGenerater() {
         const reviewElement = document.createElement('div');
         reviewElement.classList.add('review-container');
         reviewElement.innerHTML = `
-            <div class="review-header">
-              <div class="user-ptofil">
-                <div class="user-profil-icon">
+        <div class="review-header">
+        <div class="user-ptofil">
+        <div class="user-profil-icon">
                   <img src="images/icons/account.png" alt="">
                 </div>
                 <div class="user-name">
@@ -476,4 +474,15 @@ products.forEach(p => {
     });
 
   }
+
 })
+document.getElementById('open-slide-bar').addEventListener('click', function () {
+  console.log('open slidebar');
+  document.querySelector('.slide-bar').classList.add('open');
+  document.querySelector('#open-slide-bar').style.display = 'none';
+});
+document.getElementById('close-slide-bar').addEventListener('click', function () {
+  console.log('close slidebar');
+  document.querySelector('.slide-bar').classList.remove('open');
+  document.querySelector('#open-slide-bar').style.display = 'block';
+});
